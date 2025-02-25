@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudPal - Task Management</title>
+  <link rel="icon" type="image/x-icon" href="studypic.png" >
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="study-tools.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <defs>
+            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#7C3AED"/>
+              <stop offset="100%" style="stop-color:#EC4899"/>
+            </linearGradient>
+          </defs>
+          <circle cx="20" cy="20" r="18" fill="url(#logoGradient)"/>
+          <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="white" font-size="20" font-weight="bold">SP</text>
+        </svg>
+        <span>StudPal</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="study-guide.html">Guide</a></li>
+        <li><a href="timer.html">Timer</a></li>
+        <li><a href="notes.html">Notes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="study-tools-main">
+    <div class="tool-card wide-card">
+      <h2>Task Management</h2>
+      <div class="todo-container">
+        <h4>Daily Tasks & Activities</h4>
+        
+        <div class="todo-filters">
+          <select id="todoFilter" onchange="filterTodos()">
+            <option value="all">All Tasks</option>
+            <option value="today">Today</option>
+            <option value="week">This Week</option>
+            <option value="study">Study</option>
+            <option value="personal">Personal</option>
+            <option value="work">Work</option>
+          </select>
+        </div>
+
+        <div class="todo-input-container">
+          <div class="input-group">
+            <input type="text" id="todoInput" placeholder="Add a new task...">
+            <input type="date" id="todoDate">
+            <input type="time" id="todoTime">
+            <select id="todoCategory">
+              <option value="study">Study</option>
+              <option value="personal">Personal</option>
+              <option value="work">Work</option>
+            </select>
+          </div>
+          <button onclick="addTodo()" class="add-todo-btn">Add</button>
+        </div>
+
+        <div class="todos-wrapper">
+          <ul id="todoList" class="todo-list"></ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="todo.js"></script>
+</body>
+</html>

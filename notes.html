@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudPal - Quick Notes</title>
+  <link rel="icon" type="image/x-icon" href="studypic.png" >
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="study-tools.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <defs>
+            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#7C3AED"/>
+              <stop offset="100%" style="stop-color:#EC4899"/>
+            </linearGradient>
+          </defs>
+          <circle cx="20" cy="20" r="18" fill="url(#logoGradient)"/>
+          <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="white" font-size="20" font-weight="bold">SP</text>
+        </svg>
+        <span>StudPal</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="study-guide.html">Guide</a></li>
+        <li><a href="todo.html">Tasks</a></li>
+        <li><a href="timer.html">Timer</a></li>
+       
+      </ul>
+    </nav>
+  </header>
+
+  <main class="study-tools-main">
+    <div class="tool-card wide-card">
+      <h2>Quick Notes</h2>
+      <div class="notes-container">
+        <div class="notes-list" id="notesList">
+          <!-- Notes will be added here -->
+        </div>
+        <div class="note-editor">
+          <textarea id="noteInput" placeholder="Write your notes here..."></textarea>
+          <button onclick="saveNote()" class="save-note-btn">Save Note</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+ 
+</body>
+</html>
